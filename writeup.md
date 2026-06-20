@@ -61,6 +61,12 @@ All headline numeric claims are covered by `pytest` unit tests
   a parameterization where business-stealing dominates (graph a, decreasing
   curves) and one where indirect network effects dominate (graph b,
   increasing curves). Vertical lines mark the resulting `n_p`, `n_fe`, `n_so`.
+  Matching the paper's curvature requires `epsilon_H < 1` (so
+  `H^-1(n) = n**(1/epsilon_H)` is convex/accelerating with zero slope at
+  `n=0`, as in the paper, rather than concave/sqrt-shaped); the plotted `n`
+  range is `[0.05, 1.3] * n_so` so the colored curves' divergence at exactly
+  `n=0` (present whenever `epsilon_V*(1+epsilon_F) != 1`) doesn't dominate
+  the scale — the paper's schematic (unlabeled axes) implicitly does the same.
 - **`prop5_excessive_variety.png`** — `Pi_P(qm)` and `W(qm)` for vertically
   differentiated developers under a parameterization satisfying
   `beta*qL > 2*qH`. Both are concave, but the profit-maximizing threshold
